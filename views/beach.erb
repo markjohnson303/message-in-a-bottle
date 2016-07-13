@@ -1,0 +1,15 @@
+<h1> Welcome to <%= @location %> beach.</h1>
+
+
+<% if @trips.to_i >= 20 %>
+<h2>You search the beach but there are no more bottles</h2>
+<% elsif @trips.to_i % 5 == 0 %>
+<h2>Ouch! There was a crab in the bottle.</h2>
+<% elsif @location == 'west' %>
+<h2> It's totally awesome to write messages in your used bottles at the end of a spring break rager! </h2>
+<% elsif @location == 'east' %>
+<h2> Argh, the Island of Tortuga runs short of turtles. </h2>
+<% end %>
+
+<h3>Where to?</h3>
+<h4><a href="/beach?location=west">West Beach</a> | <a href="/beach?location=east"> East Beach </a></h4>
